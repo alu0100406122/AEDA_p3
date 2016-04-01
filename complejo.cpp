@@ -29,22 +29,44 @@ const Complejo Complejo::toComplejo() const{
 
 //Devuelve una copia del numero actual en el tipo Racional.
 const Racional Complejo::toRacional() const{
-    return Racional(real,1);
+    try{
+        throw 4;
+        
+    }
+    catch(int e){
+        cout << endl;
+        cout << "Mensaje de error: Se perderá precisión al transformar de Complejo a Racional. "<< endl;
+        return Racional(real,1);
+        cout << endl;
+    }
+    
 }
 
 //Devuelve una copia del numero actual en el tipo Real.
 const Real Complejo::toReal() const{
-    return Real(real);
+    try{
+        throw 4;
+        
+    }
+    catch(int e){
+        cout << endl;
+        cout << "Mensaje de error: Se perderá precisión al transformar de Complejo a Real. "<< endl;
+        return Real(real);
+        cout << endl;
+    }
+    
 }
 
 //Devuelve una copia del numero actual en el tipo Complejo.
 const Entero Complejo::toEntero() const{
     try{
         throw 3;
-        return Entero(real);
     }
     catch(int e){
-        cout << "Mensaje de error: Se perderá precisión al transformar a Entero el número Complejo. "<< endl;
+        cout << endl;
+        cout << "Mensaje de error: Se perderá precisión al transformar de Complejo a Entero. "<< endl;
+        return Entero(real);
+        cout << endl;
     }
     
 }
@@ -89,7 +111,6 @@ ostream& Complejo::toStream(ostream& sout) const{
 //Lee un numero desde flujo
 istream& Complejo::fromStream(istream& sin){
     sin >> real;
-    sin >> operador;
     sin >> imag;
     
     return sin;

@@ -11,7 +11,6 @@ class Complejo: public Numero{
     private:
         float real;
         float imag;
-        char operador;
         
     public:
         //Constructor y destructor.

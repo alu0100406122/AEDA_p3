@@ -77,7 +77,9 @@ Numero& Entero::operator/(const Numero &b) const{
         }
     }
     catch(int e){
+        cout << endl;
         cout << "Mensaje de error: División por 0 (Enteros). Excepción --> " << e << endl;
+        cout << endl;
         
     }
     
